@@ -9,8 +9,24 @@ void setup() {
 
 // the loop function runs over and over again forever
 void loop() {
-  digitalWrite(ledPIN, HIGH);   // turn the LED on (HIGH is the voltage level)
-  delay(2500);                       // wait for a second
-  digitalWrite(ledPIN, LOW);    // turn the LED off by making the voltage LOW
-  delay(5000);                       // wait for a second
+  if(ledPIN == 2){
+      digitalWrite(ledPIN, HIGH);   // turn the LED on (HIGH is the voltage level)
+      delay(2500);                       // wait for a second
+      digitalWrite(ledPIN, LOW);    // turn the LED off by making the voltage LOW
+      delay(5000);                       // wait for a second
+      ledPIN = ledPIN + 2;
+  
+  }else if(ledPIN == 4){
+      digitalWrite(ledPIN, HIGH);   // turn the LED on (HIGH is the voltage level)
+      delay(2500);                       // wait for a second
+      digitalWrite(ledPIN, LOW);    // turn the LED off by making the voltage LOW
+      delay(5000);                       // wait for a second
+      ledPIN = ledPIN + 4;
+  }else if(ledPIN == 8){
+      digitalWrite(ledPIN, HIGH);   // turn the LED on (HIGH is the voltage level)
+      delay(2500);                       // wait for a second
+      digitalWrite(ledPIN, LOW);    // turn the LED off by making the voltage LOW
+      delay(5000);                       // wait for a second
+      ledPIN = 2;
+  }
 }
